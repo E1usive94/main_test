@@ -1,59 +1,47 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Главная · Новый Вектор 2026</title>
-  <meta name="description" content="Официальный сайт проекта Новый Вектор 2026">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Облако мнений | Новый Вектор 2026</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="header"><div class="wrap nav"><a class="logo" href="index.html">Новый<br><span>Вектор 2026</span></a><nav class="menu"><a class="active" href="index.html">Главная</a><a class="" href="about.html">Что такое Новый вектор?</a><a class="" href="services.html">Службы</a><a class="" href="team.html">Наша команда</a><a class="" href="schedule.html">План мероприятий</a></nav></div></header>
+  <main class="app">
+    <section class="hero">
+      <div class="badge">Новый Вектор — 2026</div>
+      <h1>Облако мнений</h1>
+      <p>Напиши одно слово или короткую фразу. Самые популярные мысли станут больше.</p>
+    </section>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-card">
-        <div class="eyebrow">Школа профсоюзного актива молодых педагогов Москвы</div>
-        <h1>Новый <span>Вектор</span> 2026</h1>
-        <p class="lead">Пространство, где молодые педагоги объединяются в команды, пробуют себя в новых ролях, создают проекты и находят свой профессиональный вектор.</p>
-        <div class="btn-row">
-          <a class="btn" href="about.html">Узнать о проекте</a>
-          <a class="btn secondary" href="services.html">Службы</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="panel input-panel" id="inputPanel">
+      <h2>Каким ты видишь Новый Вектор?</h2>
+      <form id="opinionForm">
+        <input id="opinionInput" type="text" maxlength="60" placeholder="Например: команда, развитие, движ" autocomplete="off" required />
+        <button type="submit">Отправить</button>
+      </form>
+      <p class="hint">Можно отправить несколько мнений. Нецензурные слова автоматически скрываются.</p>
+    </section>
 
-  <section class="section wrap">
-    <div class="carousel-placeholder">
+    <section class="toolbar">
+      <button class="ghost" id="screenModeBtn">Режим экрана</button>
+      <button class="ghost" id="resetBtn">Очистить демо</button>
+    </section>
+
+    <section class="cloud-wrap">
+      <div id="wordCloud" class="word-cloud" aria-live="polite"></div>
+      <div class="empty" id="emptyState">Пока мнений нет. Стань первым 👀</div>
+    </section>
+
+    <section class="qr-panel panel">
       <div>
-        <div class="eyebrow">Фото прошлых лет</div>
-        <h2>Здесь будет карусель</h2>
-        <p class="sub">Позже сюда можно добавить фотографии с прошлых событий: открытия, командной работы, мастер-классов, вечерних мероприятий и общих моментов школы.</p>
+        <h2>QR для участников</h2>
+        <p>После публикации на GitHub Pages вставь ссылку на сайт в любой QR-генератор.</p>
       </div>
-    </div>
-  </section>
+      <div class="qr-placeholder">QR</div>
+    </section>
+  </main>
 
-  <section class="section wrap">
-    <div class="section-head">
-      <div>
-        <h2>Почему это важно?</h2>
-        <p class="sub">«Новый Вектор» — это не только программа мероприятий. Это среда, в которой молодые педагоги учатся работать вместе, брать ответственность и превращать идеи в реальные решения.</p>
-      </div>
-    </div>
-    <div class="feature-grid">
-      <div class="feature"><b>Команда</b><span>Участники объединяются вокруг общих задач и начинают действовать как единое сообщество.</span></div>
-      <div class="feature"><b>Практика</b><span>Каждая служба решает реальные задачи проекта и сразу видит результат своей работы.</span></div>
-      <div class="feature"><b>Развитие</b><span>Участники прокачивают навыки, которые нужны педагогу, организатору и лидеру.</span></div>
-      <div class="feature"><b>Будущее</b><span>Идеи школы могут становиться основой для новых окружных и городских инициатив.</span></div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer"><div class="wrap">© Новый Вектор 2026</div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
