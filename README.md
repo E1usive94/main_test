@@ -1,22 +1,32 @@
 # Новый Вектор 2026 — сайт карточек
 
-Структура сайта:
+Готовая версия для GitHub Pages.
 
-- `index.html` — главная страница с выбором раздела.
-- `services.html` — службы.
-- `districts.html` — руководители окружных команд.
-- `team.html` — управляющая команда, пока заглушка.
-- `assets/services` — изображения карточек служб.
-- `assets/districts` — изображения руководителей окружных команд.
-- `assets/team` — будущие карточки управляющей команды.
+## Как добавить новую карточку службы
+
+1. Положите изображение в `assets/services/`, например `assets/services/finance.jpg`.
+2. Откройте `data/services.json`.
+3. Добавьте объект:
+
+```json
+{
+  "title": "Финансовая служба",
+  "subtitle": "Считаем. Планируем. Помогаем.",
+  "image": "assets/services/finance.jpg",
+  "tag": "Финансы"
+}
+```
+
+## Как добавить руководителя окружной команды
+
+1. Положите изображение в `assets/districts/`.
+2. Добавьте объект в `data/districts.json`.
+
+## Как добавить управляющую команду
+
+1. Положите изображение в `assets/team/`.
+2. Добавьте объект в `data/team.json`.
 
 ## Публикация на GitHub Pages
 
-1. Создайте репозиторий на GitHub.
-2. Загрузите все файлы и папки из архива в корень репозитория.
-3. Откройте `Settings` → `Pages`.
-4. В `Build and deployment` выберите `Deploy from a branch`.
-5. Branch: `main`, Folder: `/root`.
-6. Нажмите `Save`.
-
-Через 1–2 минуты GitHub Pages выдаст публичную ссылку.
+Settings → Pages → Deploy from a branch → main → /root.
